@@ -31,6 +31,9 @@ Contraseña: 123456
 Capturas de pantalla
 A continuación se muestran las evidencias del funcionamiento de la aplicación:
 
+Capturas de pantalla
+A continuación se muestran las evidencias del funcionamiento de la aplicación:
+
 1. Pantalla de Login:
 https://capturas/login.png
 
