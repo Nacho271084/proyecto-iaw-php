@@ -31,12 +31,12 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         $stmt->execute(['email' => $email]);
         $usuario = $stmt->fetch();
 
-        // 5. Verificar contraseña
-        if ($usuario && password_verify($password, $usuario['password'])) {
+        // 5. Verificar contraseña (USANDO OBJETOS)
+        if ($usuario && password_verify($password, $usuario->password)) {
             // Login correcto: guardamos datos en sesión
-            $_SESSION['usuario_id'] = $usuario['id'];
-            $_SESSION['usuario_nombre'] = $usuario['nombre'];
-            $_SESSION['usuario_rol'] = $usuario['rol'];
+            $_SESSION['usuario_id'] = $usuario->id;
+            $_SESSION['usuario_nombre'] = $usuario->nombre;
+            $_SESSION['usuario_rol'] = $usuario->rol;
 
             // Redirigimos al panel
             header('Location: index.php');
