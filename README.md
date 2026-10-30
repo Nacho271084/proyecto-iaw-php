@@ -49,7 +49,7 @@ https://capturas/sin_sesion.png
 6. Prueba de Rollback en transacción de borrado:
 https://capturas/rollback.png
 
-⚙️ Funcionalidades y seguridad implementadas
+Funcionalidades y seguridad implementadas
 A lo largo del desarrollo se han aplicado los siguientes conceptos:
 
 Sesiones y rutas protegidas: Todas las páginas internas verifican si el usuario ha iniciado sesión.
@@ -65,7 +65,5 @@ Paginación y filtros: Listado dividido por páginas y buscador por título usan
 Integridad de datos: Borrado mediante transacciones SQL (beginTransaction / rollBack) y registro en tabla de auditoría.
 
 Preferencias de usuario: Uso de cookies para guardar el tema visual (claro/oscuro).
-
-text
 
 ---
