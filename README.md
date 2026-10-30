@@ -17,4 +17,51 @@ Para ejecutar este proyecto es necesario contar con un entorno de servidor web (
    ```bash
    mysql -u iaw_user -p gestor_incidencias < sql/schema.sql
    mysql -u iaw_user -p gestor_incidencias < sql/seed.sql
----
+(El archivo seed.sql contiene las tablas y 51 tickets de prueba).
+
+Accede a la aplicación en tu navegador usando la ruta: http://localhost/proyectoIAW/public/login.php
+
+Credenciales de prueba
+Para probar la aplicación, puedes iniciar sesión con el siguiente usuario administrador:
+
+Email: admin@test.com
+
+Contraseña: 123456
+
+Capturas de pantalla
+A continuación se muestran las evidencias del funcionamiento de la aplicación:
+
+1. Pantalla de Login:
+https://capturas/login.png
+
+2. Listado con paginación y búsqueda:
+https://capturas/listado.png
+
+3. Formulario con validación de errores en servidor:
+https://capturas/formulario_error.png
+
+4. Aplicación de preferencia guardada en Cookie (Tema Oscuro):
+https://capturas/cookie.png
+
+5. Intento de acceso sin sesión (Redirección automática):
+https://capturas/sin_sesion.png
+
+6. Prueba de Rollback en transacción de borrado:
+https://capturas/rollback.png
+
+Funcionalidades y seguridad implementadas
+A lo largo del desarrollo se han aplicado los siguientes conceptos:
+
+Sesiones y rutas protegidas: Todas las páginas internas verifican si el usuario ha iniciado sesión.
+
+Protección CSRF: Uso de tokens únicos en los formularios comparados mediante hash_equals().
+
+Prevención de XSS: Uso de una función de escape e() con htmlspecialchars() en todas las salidas.
+
+Base de datos segura: Uso de PDO con consultas preparadas para evitar Inyección SQL.
+
+Paginación y filtros: Listado dividido por páginas y buscador por título usando LIMIT y OFFSET.
+
+Integridad de datos: Borrado mediante transacciones SQL (beginTransaction / rollBack) y registro en tabla de auditoría.
+
+Preferencias de usuario: Uso de cookies para guardar el tema visual (claro/oscuro).
