@@ -126,7 +126,7 @@ $temaActual = $_COOKIE['tema'] ?? 'claro';
                     <?php foreach ($tickets as $t): ?>
                         <tr>
                             <td><?php echo e($t->id); ?></td>
-                            <td><?php echo e($t->titulo); ?></td>
+                            <td><a href="items_show.php?id=<?php echo $t->id; ?>" style="color: #007bff; text-decoration: none; font-weight: bold;"><?php echo e($t->titulo); ?></a></td>
                             <td>
                                 <span class="badge bg-<?php echo e($t->prioridad); ?>">
                                     <?php echo e(ucfirst($t->prioridad)); ?>

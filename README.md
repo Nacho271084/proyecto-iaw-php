@@ -32,24 +32,27 @@ Capturas de pantalla
 A continuación se muestran las evidencias del funcionamiento de la aplicación:
 
 1. Pantalla de Login:
-https://capturas/login.png
+![Login](capturas/login.png)
 
 2. Listado con paginación y búsqueda:
-https://capturas/listado.png
+![Listado](capturas/listado.png)
 
 3. Formulario con validación de errores en servidor:
-https://capturas/formulario_error.png
+![Formulario](capturas/formulario_error.png)
+
+4. Ficha de detalle:
+![Detalle](capturas/detalle.png)
 
 4. Aplicación de preferencia guardada en Cookie (Tema Oscuro):
-https://capturas/cookie.png
+![Cookie](capturas/cookie.png)
 
 5. Intento de acceso sin sesión (Redirección automática):
-https://capturas/sin_sesion.png
+![Sesion](capturas/sin_sesion.png)
 
 6. Prueba de Rollback en transacción de borrado:
-https://capturas/rollback.png
+![Rollback](capturas/rollback.png)
 
-⚙️ Funcionalidades y seguridad implementadas
+Funcionalidades y seguridad implementadas
 A lo largo del desarrollo se han aplicado los siguientes conceptos:
 
 Sesiones y rutas protegidas: Todas las páginas internas verifican si el usuario ha iniciado sesión.
@@ -65,7 +68,3 @@ Paginación y filtros: Listado dividido por páginas y buscador por título usan
 Integridad de datos: Borrado mediante transacciones SQL (beginTransaction / rollBack) y registro en tabla de auditoría.
 
 Preferencias de usuario: Uso de cookies para guardar el tema visual (claro/oscuro).
-
-text
-
----
